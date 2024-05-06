@@ -1,0 +1,142 @@
+/* .container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "display display display display display display"
+      "keys keys keys zero-dec operators operators"
+      "keys keys keys zero-dec operators operators"
+      "keys keys keys clear calculate calculate";
+  }
+  
+  .display { grid-area: display; }
+  
+  .calculate { grid-area: calculate; }
+  
+  .clear { grid-area: clear; }
+  
+  .operators { grid-area: operators; }
+  
+  .keys { 
+    grid-area: keys;
+
+ }
+  
+  .zero-dec { grid-area: zero-dec; } */
+
+  @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Luckiest+Guy&display=swap');
+
+  .jersey-25-charted-regular {
+    font-family: "Jersey 25 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .luckiest-guy-regular {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* height: 100vh; */
+    background-color: rgb(2, 20, 36);
+  }
+  
+  button {
+    width: 100%;
+    height: 80px;
+    border: 0.5px solid #000;
+    font-size: 2rem;
+    font-weight: 300;
+    cursor: pointer;
+   
+  }
+
+  #keys {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2px;
+    pad: 10px;
+    font-family: "Luckiest Guy", cursive;
+  }
+
+  button:hover{
+    color: whitesmoke;
+  }
+
+  button:active {
+    color: rgb(0, 225, 255);
+  }
+
+  #calculator {
+    font-family:"Minecraftia-Regular" ;
+    background-color: #000;
+    max-width: 85vw;
+    overflow: hidden;
+    border-radius: 10px;
+   
+  }
+
+  #display-l {
+    width: 100%;
+    padding: 70px;
+    font-size: 4rem;
+    border-radius: 3px;
+    font-family: "Jersey 25 Charted", sans-serif;
+    border: 0.3px solid #f41010c6;
+    background-color: #37ff14c2;
+    color: #000;
+
+    position: relative;
+  }
+
+  .numbers {
+    background-color:cadetblue;
+  }
+
+  .operators {
+    background-color: orange;
+  }
+
+  .cls {
+    background-color: crimson;
+  }
+
+  .equal {
+    background-color:rgb(89, 139, 46);
+  }
+
+  .powers {
+    background-color: tomato;
+  }
+
+  @keyframes typing-cursor {
+    0% {
+      border-right: 2px solid transparent; /* Start with no cursor */
+    }
+    50% {
+      border-right: 2px solid white; /* Show cursor */
+    }
+    100% {
+      border-right: 2px solid transparent; /* Hide cursor */
+    }
+  }
+  
+
+  #display-l::after {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position relative to the display */
+    top: 0; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    height: 100%; /* Same height as the display */
+    border-right: 2px solid transparent; /* Initial state */
+    animation: typing-cursor 1s infinite; /* Apply the animation */
+  }
