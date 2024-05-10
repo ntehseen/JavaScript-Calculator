@@ -88,12 +88,13 @@
   #display-l {
     width: 100%;
     padding: 40px 10px;
-    font-size: 4rem;
+    font-size: 3rem;
     border-radius: 3px;
     font-family: "Jersey 25 Charted", sans-serif;
     border: 0.3px solid #f41010c6;
     background-color: #37ff14c2;
     color: #000;
+    overflow: hidden;
 
     position: relative;
   }
